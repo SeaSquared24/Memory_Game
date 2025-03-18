@@ -61,14 +61,14 @@ def get_valid_index(count, index):
                 index = int(input("Enter first index: "))
             else:
                 index = int(input("Enter second index: "))
-            check = truth[index]  # Will cause an IndexError if the number entered is out of bounds.
+
             while display[index] != '*':  # custom case where input is valid but has already been matched.
                 print("This number has already been matched. Try again.")
                 if is_odd(count):
                     index = int(input("Enter first index: "))
                 else:
                     index = int(input("Enter second index: "))
-                check = truth[index]
+
         except IndexError:
             print("Invalid index. Try again.")
         except ValueError:
